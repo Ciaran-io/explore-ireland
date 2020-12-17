@@ -4,15 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="./public/build/assets/css/styles.css">
   <title>Document</title>
 </head>
 
-<body>
-
+<body class=" bg-gray-100 ">
   <header>
-    <nav class=" flex justify-center py-2 lg:py-4">
-      <h1 class="uppercase text-lg sm:text-2xl md:text-3xl text-indigo-500">explore ireland</h1>
+    <nav class="flex justify-center py-2 lg:py-4">
+      <h1 class="uppercase text-lg sm:text-2xl md:text-3xl text-primary">explore ireland</h1>
     </nav>
   </header>
 
@@ -20,47 +19,105 @@
     <!-- hero image -->
     <div class="flex justify-center mt-1 lg:mt-3">
       <picture>
-        <source media="(min-width: 500px)" srcset="assets/images/david-marcu-VfUN94cUy4o-unsplash-3.jpg">
-        <img class="xl:rounded-xl" src="assets/images/david-marcu-VfUN94cUy4o-unsplash.jpg"
+        <source media="(min-width: 500px)" srcset="./public/build/assets/images/david-marcu-VfUN94cUy4o-unsplash-3.jpg">
+        <img class="xl:rounded-xl" src="./public/build/assets/images/david-marcu-VfUN94cUy4o-unsplash.jpg"
           alt="a head carved out of wood">
       </picture>
     </div>
-    <!-- destination cards -->
-    <section id="destination-cards"
-      class="w-screen h-96 mt-5 md:mt-20 bg-gradient-to-r from-gray-400 via-gray-200 to-white ">
-      <div class="container mx-auto ">
-        <h1 class="text-2xl uppercase text-center text-blue-700">where will your next trip
-          take you?</h1>
+    <!-- destination cards section -->
+    <section id="destination-cards" class="w-screen h-96 mt-5 md:mt-10 bg-gray-300 ">
+      <div class="flex justify-center">
+        <h1 class="text-xl inline-block p-2 uppercase text-center text-primary md:text-3xl">where will
+          your next trip
+          take you ?</h1>
       </div>
-      <div class="flex content-center md:container h-full mx-auto overflow-auto">
-        <div class="grid grid-cols-card-columns-width gap-12 self-center h-4/6 ">
-          <!-- cyle location card element -->
-          <div class="flex ml-4 bg-gray-200 rounded-xl">
-            <img class="object-cover w-1/2 rounded-l-lg  " src="./assets/images/hiking-card-image.jpg" alt="">
-            <div class="flex flex-col justify-around items-center p-2.5">
-              <h1 class="font-body text-center text-gray-700 text-xl">Disover Irelands Top Hiking Locations</h1>
-              <button id="button-cycle-locations"
-                class="bg-white rounded-md w-9/12 h-auto p-2.5 shadow-2xl text-center"><span
-                  class="text-gray-700 text-lg">Discover</span></button>
+      <!-- destination cards container -->
+      <div class="flex xl:container items-center h-full md:ml-4 lg:mx-auto bg-gray-400 rounded-md">
+        <div class="grid grid-flow-col gap-4 place-items-center w-full h-full overflow-auto">
+          <div class="flex flex-col place-content-evenly h-5/6 w-72 md:w-96 bg-primary rounded-md">
+            <div class="flex items-center">
+              <h1 class="text-lg md:text-2xl text-white pl-4">
+                Top Cycling Destinations
+              </h1>
+              <svg class="w-6 h-6 flex-1 fill-current text-white">
+                <use xlink:href="#icon-circle-right">
+                  <symbol id="icon-circle-right" viewBox="0 0 20 20">
+                    <path
+                      d="M10 0c-5.523 0-10 4.477-10 10s4.477 10 10 10 10-4.477 10-10-4.477-10-10-10zM10 18.125c-4.487 0-8.125-3.638-8.125-8.125s3.638-8.125 8.125-8.125 8.125 3.638 8.125 8.125-3.638 8.125-8.125 8.125z">
+                    </path>
+                    <path d="M6.929 13.804l1.768 1.768 5.571-5.571-5.571-5.571-1.768 1.768 3.804 3.804z"></path>
+                  </symbol>
+                </use>
+              </svg>
+            </div>
+            <div class="flex items-center">
+              <h1 class="text-lg md:text-2xl text-white pl-4">
+                Top Trail Destinations
+              </h1>
+              <svg class="w-6 h-6 flex-1 fill-current text-white text-right  ">
+                <use xlink:href="#icon-circle-right">
+                  <symbol id="icon-circle-right" viewBox="0 0 20 20">
+                    <path
+                      d="M10 0c-5.523 0-10 4.477-10 10s4.477 10 10 10 10-4.477 10-10-4.477-10-10-10zM10 18.125c-4.487 0-8.125-3.638-8.125-8.125s3.638-8.125 8.125-8.125 8.125 3.638 8.125 8.125-3.638 8.125-8.125 8.125z">
+                    </path>
+                    <path d="M6.929 13.804l1.768 1.768 5.571-5.571-5.571-5.571-1.768 1.768 3.804 3.804z"></path>
+                  </symbol>
+                </use>
+              </svg>
+            </div>
+            <div class="flex place-content-around items-center">
+              <h1 class="text-lg md:text-2xl text-white pl-4">
+                Top Tourist Destinations
+              </h1>
+              <svg class="w-6 h-6 flex-1 fill-current text-white ">
+                <use xlink:href="#icon-circle-right">
+                  <symbol id="icon-circle-right" viewBox="0 0 20 20">
+                    <path
+                      d="M10 0c-5.523 0-10 4.477-10 10s4.477 10 10 10 10-4.477 10-10-4.477-10-10-10zM10 18.125c-4.487 0-8.125-3.638-8.125-8.125s3.638-8.125 8.125-8.125 8.125 3.638 8.125 8.125-3.638 8.125-8.125 8.125z">
+                    </path>
+                    <path d="M6.929 13.804l1.768 1.768 5.571-5.571-5.571-5.571-1.768 1.768 3.804 3.804z"></path>
+                  </symbol>
+                </use>
+              </svg>
+            </div>
+          </div>
+          <!-- cyle location card -->
+          <div class="location-cards">
+            <div class="md:w-1/2">
+              <img class="rounded-t-md md:h-full object-cover"
+                src="./public/build/assets/images/cycle-locations-image.jpg" alt="">
+            </div>
+            <div class="flex flex-col place-content-around h-full items-center md:w-1/2">
+              <h1 class="font-body text-center text-gray-700 text-xl">Disover Irelands Top Cycling Trail
+                Locations
+              </h1>
+              <button id="button-cycle-locations" class="card-discover-button"><span class="text-white text-lg">Discover
+                  Now</span></button>
+            </div>
+          </div>
+          <!-- trail location card -->
+          <div class="location-cards">
+            <div class="md:w-1/2">
+              <img class="rounded-t-md md:h-full object-cover" src="./public/build/assets/images/trail-card-image.jpg"
+                alt="">
+            </div>
+            <div class="flex flex-col place-content-around h-full items-center md:w-1/2">
+              <h1 class="font-body text-center text-gray-700 text-xl">Disover Irelands Top Trails Locations</h1>
+              <button id="button-trails-locations" class="card-discover-button">
+                <span class="text-white text-lg">Discover Now</span></button>
             </div>
           </div>
           <!-- tourist location card element -->
-          <div class="flex ml-4 bg-gray-200 rounded-xl">
-            <img class="object-cover w-1/2 rounded-l-lg  " src="./assets/images/ireland-card-image.jpg" alt="">
-            <div class="flex flex-col justify-around items-center p-2.5">
-              <h1 class="font-body text-center text-gray-700 text-xl">Disover Irelands Top Tourist Locations</h1>
-              <button id="button-trails-Locations"
-                class="bg-white rounded-md w-9/12 h-auto p-2.5 shadow-2xl text-center">
-                <span class="text-gray-700 text-lg">Discover</span></button>
+          <div class="location-cards">
+            <div class="md:w-1/2">
+              <img class="rounded-t-md md:h-full object-cover"
+                src="./public/build/assets/images/tour-ireland-card-image.jpg" alt="">
             </div>
-          </div>
-          <!-- trail location card element -->
-          <div class="flex ml-4 bg-gray-200 rounded-xl">
-            <img class="object-cover w-1/2 rounded-l-lg  " src="./assets/images/trail-card-image.jpg" alt="">
-            <div class="flex flex-col justify-around items-center p-2.5">
-              <h1 class="font-body text-center text-gray-700 text-xl">Disover Irelands Top Trail Locations</h1>
-              <button id"ButtonTrailLocation" class=" bg-white rounded-md w-9/12 h-auto p-2.5 shadow-2xl"><span
-                  class="text-gray-700 text-lg">Discover</span></button>
+            <div class="flex flex-col place-content-around h-full items-center md:w-1/2">
+              <h1 class="font-body text-center text-gray-700 text-xl">Disover Irelands Top Tourist Locations</h1>
+              <button id="button-tourist-locations" class="card-discover-button"><span
+                  class="text-white text-lg">Discover
+                  Now</span></button>
             </div>
           </div>
         </div>
@@ -70,156 +127,148 @@
     <!-- Location array data inputed into list elements,this section is set to hidden until user 
           input on button element inside destintaion card section -->
     <!-- This section displays cycle location trail data after user input -->
-    <section id="cycle-locations-section" class=" hidden h-72 mt-10">
-      <div class="flex flex-col md:flex-row lg:flex-row xl-flex-row">
-        <div class="mx-8 md:w-11/12 lg:w-10/12 xl:w-10/12  ">
-          <ul onclick="showListItemData()"
-            class="locations-list-container grid grid-cols-1 grid-rows-10 gap-3 md:grid-cols-2 md:grid-rows-5 md:justify-center place-items-center">
-            <li class="location-list-items cycle-list">
-              <p id="achil" class="text-1xl p-4"></p>
-            </li>
-            <li class="location-list-items cycle-list">
-              <p id="ballintotis" class=" text-1xl p-4">
-              </p>
-            </li>
-            <li id="2" class="location-list-items cycle-list">
-              <p id="baera" class="text-1xl p-4">location</p>
-            </li>
-            <li class="location-list-items cycle-list">
-              <p id="clifden" class=" text-1xl p-4">location</p>
-            </li>
-            <li class="location-list-items cycle-list">
-              <p id="donegal" class=" text-1xl p-4">location</p>
-            </li>
-            <li class="location-list-items cycle-list">
-              <p id="doolin" class=" text-1xl p-4">location</p>
-            </li>
-            <li class="location-list-items cycle-list">
-              <p id="eastKilkenny" class=" text-1xl p-4">location</p>
-            </li>
-            <li class="location-list-items cycle-list">
-              <p id="lough" class=" text-1xl p-4">location</p>
-            </li>
-            <li class="location-list-items cycle-list">
-              <p id="mullingar" class=" text-1xl p-4">location</p>
-            </li>
-            <li class="location-list-items cycle-list">
-              <p id="northKilkenny" class=" text-1xl p-4">location</p>
-            </li>
+    <section id="cycle-locations-section"
+      class="hidden xl:container h-full w-full mt-24 mx-auto bg-primary rounded-md shadow-2xl">
+      <div class="flex flex-col md:flex-row pt-10">
+        <div class="mx-8 md:w-1/2">
+          <h1 class="location-list-header">
+            View All Of Irelands Top Cycle Trail Destinations
+          </h1>
+          <ul onclick="showListItemData()" id="cycle-location-list" class="location-list-container">
+            <li class="location-list-items"></li>
+            <li class="location-list-items"></li>
+            <li class="location-list-items"></li>
+            <li class="location-list-items"></li>
+            <li class="location-list-items"></li>
+            <li class="location-list-items"></li>
+            <li class="location-list-items"></li>
+            <li class="location-list-items"></li>
+            <li class="location-list-items"></li>
+            <li class="location-list-items"></li>
           </ul>
         </div>
         <!-- displays google maps after user input in card button element -->
-        <div id="map" class=" w-full h-72">
-          <h1>Google Map</h1>
+        <div id="map-1" class="map">
         </div>
       </div>
     </section>
 
-    <!-- This section displays Hiking location data after user input -->
-    <section id="trail-locations-section" class="hidden h-72 mt-10">
-      <div class="flex flex-col md:flex-row lg:flex-row xl-flex-row">
-        <div class="mx-8 md:w-11/12 lg:w-10/12 xl:w-10/12  ">
-          <ul onclick="showListItemData()" class=" locations-list-container grid grid-cols-1 grid-rows-10 gap-3 md:grid-cols-2 md:grid-rows-5
-            md:justify-center place-items-center">
-            <li class="location-list-items">
-              <p id="looped-walks" class=" text-1xl p-4">
-              </p>
-            </li>
-            <li class="location-list-items">
-              <p id="abbeyleix" class="text-1xl p-4">location</p>
-            </li>
-            <li class="location-list-items">
-              <p id="arklow" class=" text-1xl p-4">location</p>
-            </li>
-            <li class="location-list-items">
-              <p id="avondale" class=" text-1xl p-4">location</p>
-            </li>
-            <li class="location-list-items">
-              <p id="ballybeg" class=" text-1xl p-4">location</p>
-            </li>
-            <li class="location-list-items">
-              <p id="ballyhoura" class=" text-1xl p-4">location</p>
-            </li>
-            <li class="location-list-items">
-              <p id="bere-island" class=" text-1xl p-4">location</p>
-            </li>
-            <li class="location-list-items">
-              <p id="cailleach" class=" text-1xl p-4">location</p>
-            </li>
-            <li class="location-list-items">
-              <p id="aghacashel" class=" text-1xl p-4">location</p>
-            </li>
-            <li class="location-list-items">
-              <p id="cloonfad" class=" text-1xl p-4">location</p>
-            </li>
+    <!-- This section displays trail location data after user input -->
+    <section id="trail-locations-section"
+      class="hidden xl:container h-full w-full mt-24 mx-auto bg-primary rounded-md shadow-2xl">
+      <div class="flex flex-col md:flex-row pt-10">
+        <div class=" mx-8 md:w-1/2">
+          <h1 class="location-list-header">View All Of Irelands Top Trail Destinations
+          </h1>
+          <ul onclick="showListItemData()" id="trail-location-list" class="location-list-container">
+            <li class="location-list-items"></li>
+            <li class="location-list-items"></li>
+            <li class="location-list-items"></li>
+            <li class="location-list-items"></li>
+            <li class="location-list-items"></li>
+            <li class="location-list-items"></li>
+            <li class="location-list-items"></li>
+            <li class="location-list-items"></li>
+            <li class="location-list-items"></li>
+            <li class="location-list-items"></li>
           </ul>
         </div>
         <!-- displays google maps after user input in card button element -->
-        <div id="map" class=" w-full h-72">
-          <h1>Google Map</h1>
+        <div id="map-2" class="map ">
         </div>
+      </div>
     </section>
 
     <!-- Location array data inputed into list elements,this section is set to hidden until user 
           input on button element inside destintaion card section -->
     <!-- This section displays Tourist location data after user input -->
-    <section id="touristLocation" class="hidden h-72 mt-10">
-      <div class="flex flex-col md:flex-row lg:flex-row xl-flex-row">
-        <div class="mx-8 md:w-11/12 lg:w-10/12 xl:w-10/12  ">
-          <ul id="locationData "
-            class=" grid grid-cols-1 grid-rows-10 gap-3 md:grid-cols-2 md:grid-rows-5 md:justify-center place-items-center">
-            <li class="location-list-items">
-              <p id="achilLocation" class="text-1xl p-4"></p>
-            </li>
-            <li class="location-list-items">
-              <p id="" class=" text-1xl p-4">
-              </p>
-            </li>
-            <li class="location-list-items">
-              <p id="" class="text-1xl p-4">location</p>
-            </li>
-            <li class="location-list-items">
-              <p id="" class=" text-1xl p-4">location</p>
-            </li>
-            <li class="location-list-items">
-              <p id="" class=" text-1xl p-4">location</p>
-            </li>
-            <li class="location-list-items">
-              <p id="" class=" text-1xl p-4">location</p>
-            </li>
-            <li class="location-list-items">
-              <p id="" class=" text-1xl p-4">location</p>
-            </li>
-            <li class="location-list-items">
-              <p id="" class=" text-1xl p-4">location</p>
-            </li>
-            <li class="location-list-items">
-              <p id="" class=" text-1xl p-4">location</p>
-            </li>
-            <li class="location-list-items">
-              <p id="" class=" text-1xl p-4">location</p>
-            </li>
+    <section id="tourist-locations-section"
+      class="hidden xl:container h-full w-full mt-24 mx-auto bg-primary rounded-md shadow-2xl">
+      <div class="flex flex-col md:flex-row pt-10">
+        <div class="mx-8 md:w-1/2">
+          <h1 class="location-list-header">
+            View All Of Irelands Top Tourist Destinations
+          </h1>
+          <ul onclick="showListItemData()" id="tourist-location-list" class="location-list-container">
+            <li class="location-list-items"></li>
+            <li class="location-list-items"></li>
+            <li class="location-list-items"></li>
+            <li class="location-list-items"></li>
+            <li class="location-list-items"></li>
+            <li class="location-list-items"></li>
+            <li class="location-list-items"></li>
+            <li class="location-list-items"></li>
+            <li class="location-list-items"></li>
+            <li class="location-list-items"></li>
           </ul>
         </div>
         <!-- displays google maps after user input in card button element -->
-        <div id="map" class=" w-full h-72">
-          <h1>Google Map</h1>
+        <div id="map-3" class="map">
         </div>
+      </div>
     </section>
-
-
-
-    <div class="h-72">
-    </div>
-
+    <!-- section for three towns in ireland -->
+    <section class="relative mt-20 xl:container mx-auto h-auto w-full bg-primary">
+      <div>
+        <div class="flex items-center">
+          <h1 class="inline-block text-white text-2xl p-4 ">Quick Explore</h1>
+          <svg class="w-8 h-8  fill-current text-white">
+            <use xlink:href="#icon-circle-right">
+              <symbol id="icon-circle-right" viewBox="0 0 20 20">
+                <path
+                  d="M10 0c-5.523 0-10 4.477-10 10s4.477 10 10 10 10-4.477 10-10-4.477-10-10-10zM10 18.125c-4.487 0-8.125-3.638-8.125-8.125s3.638-8.125 8.125-8.125 8.125 3.638 8.125 8.125-3.638 8.125-8.125 8.125z">
+                </path>
+                <path d="M6.929 13.804l1.768 1.768 5.571-5.571-5.571-5.571-1.768 1.768 3.804 3.804z"></path>
+              </symbol>
+            </use>
+          </svg>
+        </div>
+        <div class="grid grid-flow-col gap-4 bg-white pt-4 overflow-auto">
+          <div class="w-72 md:w-auto ">
+            <img class="rounded-md " src="./public/build/assets/images/galway-image.jpg" alt="">
+            <h1 class="text-2xl py-4 pl-2">Galway City</h1>
+          </div>
+          <div class="w-72 md:w-auto ">
+            <img class=" rounded-md" src="./public/build/assets/images/dublin-temple-bar-image.jpg" alt="">
+            <h1 class="text-2xl py-4 pl-2">Dublin - Temple Bar</h1>
+          </div>
+          <div class="w-72 md:w-auto ">
+            <img class=" rounded-md" src="./public/build/assets/images/clare-image.jpg" alt="">
+            <h1 class="text-2xl py-4 pl-2">County Clare</h1>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
-  <!-- <script async defer
+
+  <footer class="bg-indigo-900 h-72 w-full mt-14">
+    <div class="grid h-full w-full ">
+      <div class=" w-auto h-3/4 place-self-center p-4 md:p-8 md:w-2/5 md:h-auto bg-primary rounded-md">
+        <form id="form">
+          <h2 class="text-white text-3xl mb-2.5">Get in touch!</h2>
+          <div class="mb-3">
+            <label for="message"></label>
+            <input class="placeholder-gray-800 bg-white rounded-sm p-2" type="text" name="message" id="message"
+              placeholder="Your email">
+          </div>
+          <div class="field mb-3">
+            <label for="from_email"></label>
+            <input class="placeholder-gray-800 bg-white rounded-sm p-2" type="text" name="from_email" id="from_email"
+              placeholder="Your message">
+          </div>
+          <input class="rounded-md text-md px-4 py-2 bg-white shadow-lg " type="submit" id="button" value="Send Email">
+        </form>
+      </div>
+    </div>
+  </footer>
+
+  <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeIG-STGaKtDRIipoNZFCI9EZIwTRyIL4&callback=initMap">
-  </script> -->
-  <script src=" ./assets/js/maps.js"> </script>
-  <script src=" ./assets/js/LocationData.js"> </script>
-  <script src="./assets/js/main.js">
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+  <script src="./public/build/assets/js/email.js"></script>
+  <script src=" ./public/build/assets/js/maps.js"></script>
+  <script src="./public/build/assets/js/main.js"></script>
 </body>
 
 </html>
