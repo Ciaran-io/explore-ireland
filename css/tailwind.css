@@ -1,0 +1,90 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,600&display=swap"); */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.location-cards {
+  @apply flex 
+  flex-col
+  bg-white 
+  rounded-md 
+  w-52 
+  h-5/6;
+}
+
+.card-discover-button {
+  @apply bg-primary
+   rounded-md
+   p-2.5
+   w-10/12
+   shadow-2xl
+   text-center;
+}
+
+.location-list-items {
+  transition: ease-in-out 0.8s;
+  @apply flex
+  flex-col
+  justify-around
+  shadow-md
+  rounded-md
+  text-center
+  w-full
+  p-3
+  bg-white;
+}
+
+.location-list-items-clicked {
+  height: calc(50% + 80px);
+  margin-bottom: 150px;
+  @apply text-gray-800;
+}
+
+.location-list-container {
+  @apply 
+  h-full
+  grid
+  grid-cols-1
+  auto-rows-auto
+  gap-x-8
+  gap-y-4;
+}
+
+.mystyle {
+  @apply 
+  bg-primary
+  rounded-md
+text-white
+  p-2
+  mt-3
+  uppercase
+  w-full
+  mx-auto;
+}
+
+.list-header {
+  @apply text-xl;
+}
+
+.map {
+  @apply h-96
+  w-auto 
+  m-2.5 
+  md:h-96 
+  md:w-1/2 
+  md:mr-8;
+}
+
+@screen md {
+  .location-list-container {
+    @apply grid-rows-5
+    grid-cols-2
+    pb-36;
+  }
+}
+
+@screen sm {
+  .location-cards {
+    @apply md:flex-row md:w-96 md:h-4/6;
+  }
+}
