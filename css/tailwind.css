@@ -21,6 +21,18 @@
    text-center;
 }
 
+.location-list-header {
+  @apply text-xl
+  text-center
+  text-white
+  bg-indigo-900
+  p-4
+  mb-4
+  shadow-md 
+  rounded-lg
+  md:text-2xl md:p-8;
+}
+
 .location-list-items {
   transition: ease-in-out 0.8s;
   @apply flex
@@ -41,8 +53,7 @@
 }
 
 .location-list-container {
-  @apply 
-  h-full
+  @apply h-full
   grid
   grid-cols-1
   auto-rows-auto
@@ -51,8 +62,7 @@
 }
 
 .mystyle {
-  @apply 
-  bg-primary
+  @apply bg-primary
   rounded-md
 text-white
   p-2
@@ -60,10 +70,6 @@ text-white
   uppercase
   w-full
   mx-auto;
-}
-
-.list-header {
-  @apply text-xl;
 }
 
 .map {
@@ -75,7 +81,65 @@ text-white
   md:mr-8;
 }
 
-@screen md {
+.explore-grid {
+  @apply grid 
+  grid-flow-row 
+  gap-4 
+  text-white
+  md:grid-flow-col;
+}
+
+.explore-grid > div {
+  @apply bg-primary 
+  rounded-lg;
+}
+
+.explore-grid h1 {
+  @apply text-xl 
+  text-center 
+  pt-3 
+  pb-1 
+  mx-4 
+  border-yellow-600 
+  border-b-2
+  md:text-2xl;
+}
+
+.explore-grid h2 {
+  @apply md:text-xl;
+}
+
+.explore-grid-list-items {
+  @apply px-4
+  py-4
+  divide-y-2 
+  divide-yellow-800;
+}
+
+.explore-grid-list-items li {
+  @apply flex 
+  justify-between 
+  items-center;
+}
+
+.explore-grid-list-items li:first-child {
+  @apply pb-2;
+}
+
+.explore-grid-list-items li:not(:first-child) {
+  @apply pt-2
+  pb-2;
+}
+
+.icon-location {
+  @apply inline-block
+  fill-current
+  text-white
+  h-6
+  w-6;
+}
+
+@screen sm {
   .location-list-container {
     @apply grid-rows-5
     grid-cols-2
