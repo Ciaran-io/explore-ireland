@@ -31366,6 +31366,29 @@ video {
   width: 83.333333%;
 }
 
+.location-list-header {
+  --tw-bg-opacity: 1;
+  background-color: rgba(49, 46, 129, var(--tw-bg-opacity));
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  text-align: center;
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+@media (min-width: 768px) {
+  .location-list-header {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding: 2rem;
+  }
+}
+
 .location-list-items {
   transition: ease-in-out 0.8s;
   --tw-bg-opacity: 1;
@@ -31412,11 +31435,6 @@ video {
   width: 100%;
 }
 
-.list-header {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
 .map {
   height: 24rem;
   margin: 0.625rem;
@@ -31431,7 +31449,93 @@ video {
   }
 }
 
+.explore-grid {
+  display: grid;
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  gap: 1rem;
+  grid-auto-flow: row;
+}
+
 @media (min-width: 768px) {
+  .explore-grid {
+    grid-auto-flow: column;
+  }
+}
+
+.explore-grid > div {
+  --tw-bg-opacity: 1;
+  background-color: rgba(1, 29, 56, var(--tw-bg-opacity));
+  border-radius: 0.5rem;
+}
+
+.explore-grid h1 {
+  --tw-border-opacity: 1;
+  border-color: rgba(217, 119, 6, var(--tw-border-opacity));
+  border-bottom-width: 2px;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding-bottom: 0.25rem;
+  padding-top: 0.75rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .explore-grid h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .explore-grid h2 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+.explore-grid-list-items > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-y-reverse: 0;
+  border-top-width: calc(2px * calc(1 - var(--tw-divide-y-reverse)));
+  border-bottom-width: calc(2px * var(--tw-divide-y-reverse));
+  --tw-divide-opacity: 1;
+  border-color: rgba(146, 64, 14, var(--tw-divide-opacity));
+}
+
+.explore-grid-list-items {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.explore-grid-list-items li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.explore-grid-list-items  li:first-child {
+  padding-bottom: 0.5rem
+}
+
+.explore-grid-list-items li:not(:first-child) {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.icon-location {
+  display: inline-block;
+  height: 1.5rem;
+  fill: currentColor;
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  width: 1.5rem;
+}
+
+@media (min-width: 640px) {
   .location-list-container {
     padding-bottom: 9rem;
     grid-template-columns: repeat(2, minmax(0, 1fr));
