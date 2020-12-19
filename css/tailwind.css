@@ -6,19 +6,48 @@
 .location-cards {
   @apply flex 
   flex-col
-  bg-white 
-  rounded-md 
   w-52 
-  h-5/6;
+  h-5/6
+  rounded-xl
+  shadow-xl 
+  bg-gray-200;
 }
 
+.location-cards > div {
+  @apply md:w-1/2;
+}
+
+.location-cards img {
+  @apply rounded-t-md
+  md:rounded-l-md 
+  md:h-full 
+  object-cover;
+}
+
+/* button element for loacation cards */
 .card-discover-button {
   @apply bg-primary
-   rounded-md
-   p-2.5
-   w-10/12
-   shadow-2xl
-   text-center;
+  rounded-md
+  p-2.5
+  w-10/12
+  shadow-2xl
+  text-center
+  text-white 
+  bg-white 
+  text-lg;
+}
+
+/* section outer element that dispalys after user clicks discover now button */
+.location-section {
+  @apply hidden 
+  xl:container
+  h-full
+  w-full
+  mt-24
+  mx-auto
+bg-primary
+  rounded-md
+  shadow-2xl;
 }
 
 .location-list-header {
@@ -48,7 +77,7 @@
 
 .location-list-items-clicked {
   height: calc(50% + 80px);
-  margin-bottom: 150px;
+  margin-bottom: 100px;
   @apply text-gray-800;
 }
 
@@ -81,20 +110,47 @@ text-white
   md:mr-8;
 }
 
-.explore-grid {
+/* quick explore section grid */
+.explore-grid-image {
+  @apply grid
+  grid-flow-col
+  gap-4 bg-white
+  pt-4 
+  overflow-auto
+  p-3;
+}
+
+.explore-grid-image div {
+  @apply w-72
+  md:w-auto;
+}
+
+.explore-grid-image img {
+  @apply rounded-md;
+}
+
+.explore-grid-image h1 {
+  @apply text-2xl
+  py-4 
+  pl-2;
+}
+
+/* grid dislplaying city lication links to google maps */
+.explore-grid-text {
   @apply grid 
   grid-flow-row 
   gap-4 
   text-white
-  md:grid-flow-col;
+  md:grid-flow-col
+  lg:h-56;
 }
 
-.explore-grid > div {
+.explore-grid-text > div {
   @apply bg-primary 
   rounded-lg;
 }
 
-.explore-grid h1 {
+.explore-grid-text h1 {
   @apply text-xl 
   text-center 
   pt-3 
@@ -105,13 +161,14 @@ text-white
   md:text-2xl;
 }
 
-.explore-grid h2 {
-  @apply md:text-xl;
+.explore-grid-text h2 {
+  @apply md:text-lg;
 }
 
 .explore-grid-list-items {
-  @apply px-4
-  py-4
+  @apply px-6
+  pt-8
+  pb-4
   divide-y-2 
   divide-yellow-800;
 }
