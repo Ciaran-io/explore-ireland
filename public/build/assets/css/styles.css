@@ -31489,7 +31489,7 @@ video {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .explore-grid h2 {
     font-size: 1.25rem;
     line-height: 1.75rem;
@@ -31517,8 +31517,8 @@ video {
   justify-content: space-between;
 }
 
-.explore-grid-list-items  li:first-child {
-  padding-bottom: 0.5rem
+.explore-grid-list-items li:first-child {
+  padding-bottom: 0.5rem;
 }
 
 .explore-grid-list-items li:not(:first-child) {
