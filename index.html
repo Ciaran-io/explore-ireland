@@ -27,19 +27,19 @@
     <!-- destination cards section -->
     <section id="destination-cards" class="w-screen h-96 mt-5 md:mt-10 bg-primary ">
       <div class="flex justify-center">
-        <h1 class="text-xl inline-block p-2 uppercase text-center text-primary md:text-3xl">where will
-          your next trip
-          take you ?</h1>
+        <h1 class="text-xl inline-block p-2 uppercase text-center text-white md:text-2xl">
+          where will your next trip take you ?
+        </h1>
       </div>
       <!-- destination cards container -->
-      <div class="flex xl:container items-center h-full md:ml-4 lg:mx-auto bg-gray-100 rounded-md">
+      <div class="flex xl:container items-center h-full md:ml-4 lg:mx-auto bg-gray-100 rounded-md shadow-lg">
         <div class="grid grid-flow-col gap-4 place-items-center w-full h-full overflow-auto">
-          <div class="flex flex-col place-content-evenly h-5/6 w-72 md:w-96 ml-5 bg-primary rounded-md">
+          <div class="flex flex-col place-content-evenly h-5/6 w-72 md:w-96 ml-5 bg-primary rounded-md text-white">
             <div class="flex items-center">
-              <h1 class="text-lg md:text-2xl text-white pl-4">
+              <h1 class="text-lg md:text-2xl pl-4">
                 Top Cycling Destinations
               </h1>
-              <svg class="w-6 h-6 flex-1 fill-current text-white">
+              <svg class="w-6 h-6 flex-1 fill-current">
                 <use xlink:href="#icon-circle-right">
                   <symbol id="icon-circle-right" viewBox="0 0 20 20">
                     <path
@@ -51,10 +51,10 @@
               </svg>
             </div>
             <div class="flex items-center">
-              <h1 class="text-lg md:text-2xl text-white pl-4">
+              <h1 class="text-lg md:text-2xl pl-4">
                 Top Trail Destinations
               </h1>
-              <svg class="w-6 h-6 flex-1 fill-current text-white text-right  ">
+              <svg class="w-6 h-6 flex-1 fill-current text-right  ">
                 <use xlink:href="#icon-circle-right">
                   <symbol id="icon-circle-right" viewBox="0 0 20 20">
                     <path
@@ -66,10 +66,10 @@
               </svg>
             </div>
             <div class="flex place-content-around items-center">
-              <h1 class="text-lg md:text-2xl text-white pl-4">
+              <h1 class="text-lg md:text-2xl pl-4">
                 Top Tourist Destinations
               </h1>
-              <svg class="w-6 h-6 flex-1 fill-current text-white ">
+              <svg class="w-6 h-6 flex-1 fill-current ">
                 <use xlink:href="#icon-circle-right">
                   <symbol id="icon-circle-right" viewBox="0 0 20 20">
                     <path
@@ -83,42 +83,43 @@
           </div>
           <!-- cyle location card -->
           <div class="location-cards">
-            <div class="md:w-1/2">
-              <img class="rounded-t-md md:h-full object-cover"
-                src="./public/build/assets/images/cycle-locations-image.jpg" alt="">
+            <div>
+              <img src="./public/build/assets/images/cycle-locations-image.jpg" alt="">
             </div>
             <div class="flex flex-col place-content-around h-full items-center md:w-1/2">
-              <h1 class="font-body text-center text-gray-700 text-xl">Disover Irelands Top Cycling Trail
-                Locations
+              <h1 class="font-body text-center text-gray-700 text-xl">
+                Disover Irelands Top Cycling Trail Locations
               </h1>
-              <button id="button-cycle-locations" class="card-discover-button bg-yellow-800 "><span
-                  class="text-white text-lg">Discover
-                  Now</span></button>
+              <button id="button-cycle-locations" class="card-discover-button">
+                <span>
+                  Discover Now
+                </span>
+              </button>
             </div>
           </div>
           <!-- trail location card -->
           <div class="location-cards">
-            <div class="md:w-1/2">
-              <img class="rounded-t-md md:h-full object-cover" src="./public/build/assets/images/trail-card-image.jpg"
-                alt="">
+            <div>
+              <img src="./public/build/assets/images/trail-card-image.jpg" alt="">
             </div>
             <div class="flex flex-col place-content-around h-full items-center md:w-1/2">
               <h1 class="font-body text-center text-gray-700 text-xl">Disover Irelands Top Trails Locations</h1>
               <button id="button-trails-locations" class="card-discover-button">
-                <span class="text-white text-lg">Discover Now</span></button>
+                <span>Discover Now</span></button>
             </div>
           </div>
           <!-- tourist location card element -->
           <div class="location-cards">
-            <div class="md:w-1/2">
-              <img class="rounded-t-md md:h-full object-cover"
-                src="./public/build/assets/images/tour-ireland-card-image.jpg" alt="">
+            <div>
+              <img src="./public/build/assets/images/tour-ireland-card-image.jpg" alt="">
             </div>
             <div class="flex flex-col place-content-around h-full items-center md:w-1/2">
               <h1 class="font-body text-center text-gray-700 text-xl">Disover Irelands Top Tourist Locations</h1>
-              <button id="button-tourist-locations" class="card-discover-button"><span
-                  class="text-white text-lg">Discover
-                  Now</span></button>
+              <button id="button-tourist-locations" class="card-discover-button">
+                <span>
+                  Discover Now
+                </span>
+              </button>
             </div>
           </div>
         </div>
@@ -128,8 +129,7 @@
     <!-- Location array data inputed into list elements,this section is set to hidden until user 
           input on button element inside destintaion card section -->
     <!-- This section displays cycle location trail data after user input -->
-    <section id="cycle-locations-section"
-      class="hidden xl:container h-full w-full mt-24 mx-auto bg-primary rounded-md shadow-2xl">
+    <section id="cycle-locations-section" class="location-section">
       <div class="flex flex-col md:flex-row pt-10">
         <div class="mx-8 md:w-1/2">
           <h1 class="location-list-header">
@@ -155,8 +155,7 @@
     </section>
 
     <!-- This section displays trail location data after user input -->
-    <section id="trail-locations-section"
-      class="hidden xl:container h-full w-full mt-24 mx-auto bg-primary rounded-md shadow-2xl">
+    <section id="trail-locations-section" class="location-section">
       <div class="flex flex-col md:flex-row pt-10">
         <div class=" mx-8 md:w-1/2">
           <h1 class="location-list-header">View All Of Irelands Top Trail Destinations
@@ -183,8 +182,7 @@
     <!-- Location array data inputed into list elements,this section is set to hidden until user 
           input on button element inside destintaion card section -->
     <!-- This section displays Tourist location data after user input -->
-    <section id="tourist-locations-section"
-      class="hidden xl:container h-full w-full mt-24 mx-auto bg-primary rounded-lg shadow-2xl">
+    <section id="tourist-locations-section" class="location-section">
       <div class="flex flex-col md:flex-row pt-10">
         <div class="mx-8 md:w-1/2">
           <h1 class="location-list-header">
@@ -209,7 +207,7 @@
       </div>
     </section>
     <!-- section for three towns in ireland -->
-    <section class="relative mt-20 xl:container mx-auto h-auto w-full bg-primary">
+    <section class="relative mt-32 xl:container mx-auto h-auto w-full bg-primary">
       <div class="flex items-center">
         <h1 class="inline-block text-white text-2xl p-4 ">Quick Explore</h1>
         <svg class="w-8 h-8  fill-current text-white">
@@ -223,24 +221,25 @@
           </use>
         </svg>
       </div>
-      <div class="grid grid-flow-col gap-4 bg-white pt-4 overflow-auto">
-        <div class="w-72 md:w-auto ">
-          <img class="rounded-md " src="./public/build/assets/images/galway-image.jpg" alt="">
-          <h1 class="text-2xl py-4 pl-2">Galway City</h1>
+      <div class="explore-grid-image">
+        <div>
+          <img src="./public/build/assets/images/galway-image.jpg" alt="">
+          <h1>Galway City</h1>
         </div>
-        <div class="w-72 md:w-auto ">
-          <img class=" rounded-md" src="./public/build/assets/images/dublin-temple-bar-image.jpg" alt="">
-          <h1 class="text-2xl py-4 pl-2">Dublin - Temple Bar</h1>
+        <div>
+          <img src="./public/build/assets/images/dublin-temple-bar-image.jpg" alt="">
+          <h1>Dublin - Temple Bar</h1>
         </div>
-        <div class="w-72 md:w-auto ">
-          <img class=" rounded-md" src="./public/build/assets/images/clare-image.jpg" alt="">
-          <h1 class="text-2xl py-4 pl-2">County Clare</h1>
+        <div>
+          <img src="./public/build/assets/images/clare-image.jpg" alt="">
+          <h1>County Clare</h1>
         </div>
       </div>
     </section>
     <!-- section for three towns in ireland list with links  -->
-    <section class="mx-3 lg:container lg:mx-auto mt-5 md:mt-14">
-      <div class="explore-grid lg:h-56">
+    <section class="mx-3 lg:container lg:mx-auto my-5 md:mt-14">
+      <div class="explore-grid-text ">
+        <!-- first grid element -->
         <div>
           <h1>
             Places of interest in Galway City
@@ -284,6 +283,7 @@
             </li>
           </ul>
         </div>
+        <!-- seccond grid element -->
         <div>
           <h1>
             Places of interest in Dublin City
@@ -327,6 +327,7 @@
             </li>
           </ul>
         </div>
+        <!-- third grid element -->
         <div>
           <h1>
             Places of interest in Clare City
@@ -376,20 +377,23 @@
 
   <footer class="bg-primary h-72 w-full mt-14">
     <div class="grid h-full w-full ">
-      <div class=" w-auto h-3/4 place-self-center p-4 md:p-8 md:w-2/5 md:h-auto bg-indigo-900 rounded-md">
+      <div
+        class="place-self-center w-3/4  p-4 md:p-8 md:w-2/5 md:h-auto border-solid border-2 border-yellow-600  rounded-md">
         <form id="form">
-          <h2 class="text-white text-3xl mb-2.5">Get in touch!</h2>
-          <div class="mb-3">
+          <h2
+            class="bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500 uppercase text-3xl mb-3.5">
+            Get in touch!</h2>
+          <div class="mb-3 w-full">
             <label for="message"></label>
-            <input class="placeholder-gray-800 bg-white rounded-sm p-2" type="text" name="message" id="message"
+            <input class="placeholder-gray-800 md:w-5/6 bg-white rounded-sm p-2" type="text" name="message" id="message"
               placeholder="Your email">
           </div>
           <div class="field mb-3">
             <label for="from_email"></label>
-            <input class="placeholder-gray-800 bg-white rounded-sm p-2" type="text" name="from_email" id="from_email"
-              placeholder="Your message">
+            <input class="placeholder-gray-800 md:w-5/6 bg-white rounded-sm p-2" type="text" name="from_email"
+              id="from_email" placeholder="Your message">
           </div>
-          <input class="rounded-md text-md px-4 py-2 bg-white shadow-lg " type="submit" id="button" value="Send Email">
+          <input class="rounded-md text-md px-4 py-2 bg-yellow-600" type="submit" id="button" value="Send Email">
         </form>
       </div>
     </div>
