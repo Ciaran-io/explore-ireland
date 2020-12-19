@@ -1,7 +1,7 @@
 const sectionCyclingContainer = document.getElementById("cycle-locations-section");
 const sectionTrailContainer = document.getElementById("trail-locations-section");
 const sectionTouringContainer = document.getElementById("tourist-locations-section")
-let locationList = document.querySelectorAll('li');
+let locationList = document.querySelectorAll('li.location-list-items');
 let locationButton;
 let locationHeading;
 let locationHeadingText;
