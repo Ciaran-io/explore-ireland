@@ -2,16 +2,21 @@ const sectionCyclingContainer = document.getElementById("cycle-locations-section
 const sectionTrailContainer = document.getElementById("trail-locations-section");
 const sectionTouringContainer = document.getElementById("tourist-locations-section")
 let locationList = document.querySelectorAll('li.location-list-items');
+let cycleListLi = document.querySelectorAll('#cycle-location-list > li')
+
+
 let locationButton;
 let locationHeading;
 let locationHeadingText;
 let informationButton;
 let informationButtonText;
+let locationCounty;
+let locationCountyText;
 
 // cycle trail location array
 // https://www.sportireland.ie/outdoors/cycling-on-road/trails#list
 
-let cyclingLocationData = [
+const cyclingLocationData = [
   { 'name': 'Achill Cycle Hub', 'county': 'Mayo', 'lat': 53.97610111, 'lng': -10.08038879 },
   { 'name': 'Ballintotis-Castlepook Loop', 'county': 'Cork', 'lat': 51.911149, 'lng': -8.092401 },
   { 'name': 'Beara Way Cycling Route', 'county': 'Cork', 'lat': 51.75020745, 'lng': -9.549238756 },
@@ -28,7 +33,7 @@ let cyclingLocationData = [
 // trail location array
 // https://www.sportireland.ie/outdoors/walking/trails#list
 
-let trailLocationData = [
+const trailLocationData = [
   { 'name': "12 O'Clock Hills Looped Walks", 'county': 'Clare', 'lat': 52.790565, 'lng': -8.707793 },
   { 'name': 'Abbeyleix Loops - Collins Bog loop', 'county': 'Laois', 'lat': 52.907005, 'lng': -7.351705 },
   { 'name': 'Arklow Loops Kynoch Walk', 'county': 'Wicklow', 'lat': 52.799941, 'lng': -6.144013 },
@@ -42,7 +47,7 @@ let trailLocationData = [
 ]
 
 // tourist trail location array
-let touristLocationData = [
+const touristLocationData = [
   { 'name': "The Cliffs of Moher", 'county': 'Galway', 'lat': 52.97337082215161, 'lng': -9.430152860068445 },
   { 'name': "Grafton Street, Dublin", 'county': 'Dublin', 'lat': 53.341515, 'lng': -6.260263 },
   { 'name': "Killarney National Park", 'county': 'Kerry', 'lat': 52.0058447, 'lng': -9.5572746 },
@@ -55,40 +60,58 @@ let touristLocationData = [
   { 'name': "Kinsale", 'county': 'Cork', 'lat': 51.70646253761719, 'lng': -8.522111609695378 },
 ]
 
-
+// This functin iterates through the location list items creates a h1 & button element in each list
+// then adds classes and appends the new elements to the DOM
 locationList.forEach(li => {
   locationHeading = document.createElement('h1');
-  locationHeading.classList.add('list-header')
-  locationHeadingText = document.createTextNode("")
-  locationHeading.appendChild(locationHeadingText);
+  locationHeadingText = document.createTextNode("");
+  locationHeading.append(locationHeadingText);
+  locationHeading.classList.add('list-heading');
+
+  locationCounty = document.createElement('h2');
+  locationCountyText = document.createTextNode('ergfer');
+  locationCounty.append(locationCountyText);
+  locationCounty.classList.add('list-heading');
 
   informationButton = document.createElement("button");
   informationButtonText = document.createTextNode('Find out more');
   informationButton.appendChild(informationButtonText);
-  informationButton.classList.add('mystyle');
+  informationButton.classList.add('button-list');
 
-  li += li.append(locationHeading, informationButton);
+  li = li.append(locationHeading, locationCounty, informationButton);
 });
 
-
+let showMoreButton = document.querySelectorAll('button.button-list')
+let locationCountyHeaing = document.querySelectorAll('.location-list-items h2.list-heading');
+// This function is called when the user clicks on the location list, then toggles a new class to extend the list item size
 showListItemData = () => {
   locationList.forEach(li => {
     li.classList.toggle('location-list-items-clicked');
   });
 
-  let locationButton, i;
-  locationButton = document.querySelectorAll("button.mystyle");
-  for (i = 0; i < locationButton.length; i++) {
-    if (locationButton[i].innerHTML === "Find out more") {
-      locationButton[i].innerHTML = "Show less";
+  locationCountyHeaing.forEach(heading => {
+    if (heading.style.)
+      heading.style.display = "none";
+  })
+
+
+  // li.locationCounty.classList.toggle('location-list-items-clicked');
+
+  // This function chnages the inner HTML of the button when the user clicks on button
+  showMoreButton.forEach(button => {
+    if (button.innerHTML === "Find out more") {
+      button.innerHTML = "Show less";
+      // locationCountyHeaing.style.display = "none"
     } else {
-      locationButton[i].innerHTML = "Find out more";
+      button.innerHTML = "Find out more";
+      // locationCountyHeaing.style.display = "none"
     }
-  }
+  })
 }
 
-let cyclingLocationListHeading = document.querySelectorAll('#cycle-location-list h1.list-header')
 
+
+let cyclingLocationListHeading = document.querySelectorAll('#cycle-location-list h1.list-heading')
 cyclingLocationListHeading[0].innerHTML = cyclingLocationData[0].name;
 cyclingLocationListHeading[1].innerHTML = cyclingLocationData[1].name;
 cyclingLocationListHeading[2].innerHTML = cyclingLocationData[2].name;
@@ -100,7 +123,7 @@ cyclingLocationListHeading[7].innerHTML = cyclingLocationData[7].name;
 cyclingLocationListHeading[8].innerHTML = cyclingLocationData[8].name;
 cyclingLocationListHeading[9].innerHTML = cyclingLocationData[9].name;
 
-let trailLocationListHeading = document.querySelectorAll('#trail-location-list h1.list-header')
+let trailLocationListHeading = document.querySelectorAll('#trail-location-list h1.list-heading')
 
 trailLocationListHeading[0].innerHTML = trailLocationData[0].name;
 trailLocationListHeading[1].innerHTML = trailLocationData[1].name;
@@ -113,7 +136,7 @@ trailLocationListHeading[7].innerHTML = trailLocationData[7].name;
 trailLocationListHeading[8].innerHTML = trailLocationData[8].name;
 trailLocationListHeading[9].innerHTML = trailLocationData[9].name;
 
-let touristLocationListHeading = document.querySelectorAll('#tourist-location-list h1.list-header')
+let touristLocationListHeading = document.querySelectorAll('#tourist-location-list h1.list-heading')
 
 touristLocationListHeading[0].innerHTML = touristLocationData[0].name;
 touristLocationListHeading[1].innerHTML = touristLocationData[1].name;
@@ -127,17 +150,20 @@ touristLocationListHeading[8].innerHTML = touristLocationData[8].name;
 touristLocationListHeading[9].innerHTML = touristLocationData[9].name;
 
 
+// Adds event listner to button elements in location destination cards
+// when user clicks on button element the cycle location section class changes from hidden to display block
 document.getElementById("button-cycle-locations").addEventListener("click", () => {
   if (sectionCyclingContainer.style.display === "none") {
     sectionCyclingContainer.style.display = "block";
     sectionTrailContainer.style.display = "none";
     sectionTouringContainer.style.display = "none";
-
   } else {
     sectionCyclingContainer.style.display = "none";
   }
 });
 
+// Adds event listner to button elements in location destination cards
+// when user clicks on button element the trail location section class changes to display block from hidden
 document.getElementById("button-trails-locations").addEventListener("click", () => {
   if (sectionTrailContainer.style.display === "none") {
     sectionTrailContainer.style.display = "block";
@@ -148,6 +174,8 @@ document.getElementById("button-trails-locations").addEventListener("click", () 
   }
 });
 
+// Adds event listner to button elements in location destination cards
+// when user clicks on button element the touring location section class changes from hidden to display block
 document.getElementById("button-tourist-locations").addEventListener("click", () => {
   if (sectionTouringContainer.style.display === "none") {
     sectionTouringContainer.style.display = "block";
