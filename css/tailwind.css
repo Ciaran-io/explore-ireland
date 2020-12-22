@@ -3,29 +3,37 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-.location-cards {
+/*! purgecss start ignore */
+
+.discover-cards {
   @apply flex 
   flex-col
   w-52 
   h-5/6
   rounded-xl
   shadow-xl 
-  bg-gray-200;
+  bg-white;
 }
 
-.location-cards > div {
+@screen sm {
+  .discover-cards {
+    @apply md:flex-row md:w-96 md:h-3/4;
+  }
+}
+
+.discover-cards > div {
   @apply md:w-1/2;
 }
 
-.location-cards img {
+.discover-cards img {
   @apply rounded-t-md
   md:rounded-l-md 
   md:h-full 
   object-cover;
 }
 
-/* button element for loacation cards */
-.card-discover-button {
+/* button element for discover cards */
+.discover-cards button {
   @apply bg-primary
   rounded-md
   p-2.5
@@ -33,23 +41,29 @@
   shadow-2xl
   text-center
   text-white 
-  bg-white 
-  text-lg;
+  text-lg
+  hover:bg-gray-300 
+  hover:text-primary;
+}
+/* disover cards h1 element */
+.discover-cards h1 {
+  @apply text-center
+text-gray-700
+  text-lg
+  md:text-xl;
 }
 
 /* section outer element that dispalys after user clicks discover now button */
 .location-section {
-  @apply hidden 
-  xl:container
-  h-full
-  w-full
+  @apply hidden
   mt-24
   mx-auto
 bg-primary
   rounded-md
-  shadow-2xl;
+  shadow-2xl
+  xl:container;
 }
-
+/* location list heading above ul element */
 .location-list-header {
   @apply text-xl
   text-center
@@ -61,7 +75,7 @@ bg-primary
   rounded-lg
   md:text-2xl md:p-8;
 }
-
+/* location list elements */
 .location-list-items {
   transition: ease-in-out 0.8s;
   @apply flex
@@ -70,27 +84,39 @@ bg-primary
   shadow-md
   rounded-md
   text-center
-  w-full
   p-3
   bg-white;
 }
-
+/* Added style to grid list items when user clicks ( see line 78 in JS) */
 .location-list-items-clicked {
   height: calc(50% + 80px);
   margin-bottom: 100px;
   @apply text-gray-800;
 }
-
-.location-list-container {
+/* Grid element for location list items*/
+.location-list-grid {
   @apply h-full
   grid
   grid-cols-1
   auto-rows-auto
-  gap-x-8
-  gap-y-4;
+  gap-x-4
+  gap-y-4
+  md:pb-36
+  lg:gap-x-8;
 }
-
-.mystyle {
+/* Grid element for location list items at screens larger than 640px*/
+@screen sm {
+  .location-list-grid {
+    @apply grid-rows-5
+    grid-cols-2;
+  }
+}
+/* H1 element in grid list items*/
+.list-heading {
+  @apply text-xl;
+}
+/* button for location list grid (find out more) */
+.button-list {
   @apply bg-primary
   rounded-md
 text-white
@@ -100,14 +126,13 @@ text-white
   w-full
   mx-auto;
 }
-
+/* Google Map */
 .map {
   @apply h-96
   w-auto 
   m-2.5 
   md:h-96 
-  md:w-1/2 
-  md:mr-8;
+  md:w-1/2;
 }
 
 /* quick explore section grid */
@@ -141,8 +166,7 @@ text-white
   grid-flow-row 
   gap-4 
   text-white
-  md:grid-flow-col
-  lg:h-56;
+  md:grid-flow-col;
 }
 
 .explore-grid-text > div {
@@ -176,7 +200,11 @@ text-white
 .explore-grid-list-items li {
   @apply flex 
   justify-between 
-  items-center;
+  items-center
+  transition 
+  ease-in-out
+  duration-300
+  hover:text-yellow-600;
 }
 
 .explore-grid-list-items li:first-child {
@@ -191,21 +219,8 @@ text-white
 .icon-location {
   @apply inline-block
   fill-current
-  text-white
   h-6
   w-6;
 }
 
-@screen sm {
-  .location-list-container {
-    @apply grid-rows-5
-    grid-cols-2
-    pb-36;
-  }
-}
-
-@screen sm {
-  .location-cards {
-    @apply md:flex-row md:w-96 md:h-4/6;
-  }
-}
+/*! purgecss end ignore */
