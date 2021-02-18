@@ -1,16 +1,17 @@
 {
-  "name": "tailwind-project",
+  "name": "milestone-project-2",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build":  "postcss css/tailwind.css -o public/build/assets/css/styles.css"
+    "build": "postcss css/tailwind.css -o public/build/assets/css/styles.css"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "autoprefixer": "^10.0.2",
+    "postcss": "^8.1.10",
     "postcss-cli": "^8.3.0",
     "tailwindcss": "^2.0.1"
   }
