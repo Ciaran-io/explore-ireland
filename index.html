@@ -1,429 +1,408 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./public/build/assets/css/styles.css" />
+    <title>Discover Irelands Top Trails</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./public/build/assets/css/styles.css">
-  <title>Document</title>
-</head>
+  <body class="bg-gray-100 font-body">
+    <header>
+      <nav class="flex justify-center py-2 lg:py-4">
+        <h1 class="uppercase text-lg sm:text-2xl md:text-3xl text-primary">explore ireland</h1>
+      </nav>
+    </header>
 
-<body class=" bg-gray-100 ">
-  <header>
-    <nav class="flex justify-center py-2 lg:py-4">
-      <h1 class="uppercase text-lg sm:text-2xl md:text-3xl text-primary">explore ireland</h1>
-    </nav>
-  </header>
-
-  <main>
-    <!-- hero image -->
-    <div class="flex justify-center mt-1 lg:mt-3">
-      <picture>
-        <source media="(min-width: 500px)" srcset="./public/build/assets/images/david-marcu-VfUN94cUy4o-unsplash-3.jpg">
-        <img class="xl:rounded-xl" src="./public/build/assets/images/david-marcu-VfUN94cUy4o-unsplash.jpg"
-          alt="a head carved out of wood">
-      </picture>
-    </div>
-    <!-- destination cards section -->
-    <section id="destination-cards-section" class="w-screen h-96 mt-5 md:mt-10 bg-primary ">
-      <div class="flex justify-center">
-        <h1 class="text-xl inline-block p-2 uppercase text-center text-white md:text-2xl">
-          where will your next trip take you ?
-        </h1>
+    <main>
+      <!-- hero image -->
+      <div class="flex justify-center mt-1 lg:mt-3">
+        <picture>
+          <source
+            media="(min-width: 650px)"
+            srcset="./public/build/assets/images/hero-image-mountain-lg.jpg"
+          />
+          <img
+            class="xl:rounded-xl"
+            src="./public/build/assets/images/hero-image-mountain.jpg"
+            alt="a man on a bycycle cycling through mountains"
+          />
+        </picture>
       </div>
-      <!-- destination cards container -->
-      <div class="flex xl:container h-full md:ml-4 lg:mx-auto bg-gray-100 rounded-md shadow-lg">
-        <div class="grid grid-flow-col gap-4 place-items-center overflow-auto ml-5 mr-10">
-          <div class="flex flex-col place-content-evenly h-5/6 w-72 md:w-96 bg-primary rounded-md text-white">
-            <div class="flex items-center">
-              <h1 class="text-lg md:text-2xl pl-4">
-                Top Cycling Destinations
-              </h1>
-              <svg class="w-6 h-6 flex-1 fill-current">
-                <use xlink:href="#icon-circle-right">
-                  <symbol id="icon-circle-right" viewBox="0 0 20 20">
-                    <path
-                      d="M10 0c-5.523 0-10 4.477-10 10s4.477 10 10 10 10-4.477 10-10-4.477-10-10-10zM10 18.125c-4.487 0-8.125-3.638-8.125-8.125s3.638-8.125 8.125-8.125 8.125 3.638 8.125 8.125-3.638 8.125-8.125 8.125z">
-                    </path>
-                    <path d="M6.929 13.804l1.768 1.768 5.571-5.571-5.571-5.571-1.768 1.768 3.804 3.804z"></path>
-                  </symbol>
-                </use>
-              </svg>
+      <!-- destination cards section -->
+      <section
+        id="destination-cards-section"
+        class="w-screen h-96 mt-5 mb-32 md:mb-40 md:mt-10 bg-primary"
+      >
+        <div class="flex justify-center">
+          <h1
+            class="text-md inline-block p-2 uppercase text-center text-white sm:text-xl md:text-2xl"
+          >
+            where will your next adventure take you ?
+          </h1>
+        </div>
+        <!-- destination cards container -->
+        <div
+          class="flex xl:container md:ml-4 min-h-full lg:mx-auto bg-gray-100 rounded-md shadow-lg"
+        >
+          <div class="grid grid-flow-col place-items-center gap-4 overflow-x-scroll ml-5 mr-10">
+            <div
+              class="flex flex-col place-content-evenly h-5/6 w-72 md:w-96 bg-primary rounded-md text-white"
+            >
+              <div class="flex items-center">
+                <h1 class="text-lg md:text-2xl pl-4">Top Cycling Destinations</h1>
+                <svg aria-hidden="true" class="icon-arrow">
+                  <use
+                    xlink:href="./public/build/assets/icons/circle-right-icon.svg#icon-circle-right"
+                  ></use>
+                </svg>
+              </div>
+
+              <div class="flex items-center">
+                <h1 class="text-lg md:text-2xl pl-4">Top Trail Destinations</h1>
+                <svg aria-hidden="true" class="icon-arrow">
+                  <use
+                    xlink:href="./public/build/assets/icons/circle-right-icon.svg#icon-circle-right"
+                  ></use>
+                </svg>
+              </div>
+
+              <div class="flex items-center">
+                <h1 class="text-lg md:text-2xl pl-4">Top Tourist Destinations</h1>
+                <svg aria-hidden="true" class="icon-arrow">
+                  <use
+                    xlink:href="./public/build/assets/icons/circle-right-icon.svg#icon-circle-right"
+                  ></use>
+                </svg>
+              </div>
             </div>
-            <div class="flex items-center">
-              <h1 class="text-lg md:text-2xl pl-4">
-                Top Trail Destinations
-              </h1>
-              <svg class="w-6 h-6 flex-1 fill-current text-right">
-                <use xlink:href="#icon-circle-right">
-                  <symbol id="icon-circle-right" viewBox="0 0 20 20">
-                    <path
-                      d="M10 0c-5.523 0-10 4.477-10 10s4.477 10 10 10 10-4.477 10-10-4.477-10-10-10zM10 18.125c-4.487 0-8.125-3.638-8.125-8.125s3.638-8.125 8.125-8.125 8.125 3.638 8.125 8.125-3.638 8.125-8.125 8.125z">
-                    </path>
-                    <path d="M6.929 13.804l1.768 1.768 5.571-5.571-5.571-5.571-1.768 1.768 3.804 3.804z"></path>
-                  </symbol>
-                </use>
-              </svg>
+            <!-- destination cards -->
+            <!-- cyle trail location card -->
+            <div class="discover-cards">
+              <div>
+                <img
+                  src="./public/build/assets/images/cycle-route-card-image.jpg"
+                  alt="image of sign post with cycle routh direction"
+                />
+              </div>
+              <div>
+                <h1>Disover Irelands Top Cycling Trail Locations</h1>
+                <button id="button-cycle-locations" class="discover-now-button">
+                  <span> Discover Now </span>
+                </button>
+              </div>
             </div>
-            <div class="flex place-content-around items-center">
-              <h1 class="text-lg md:text-2xl pl-4">
-                Top Tourist Destinations
-              </h1>
-              <svg class="w-6 h-6 flex-1 fill-current ">
-                <use xlink:href="#icon-circle-right">
-                  <symbol id="icon-circle-right" viewBox="0 0 20 20">
-                    <path
-                      d="M10 0c-5.523 0-10 4.477-10 10s4.477 10 10 10 10-4.477 10-10-4.477-10-10-10zM10 18.125c-4.487 0-8.125-3.638-8.125-8.125s3.638-8.125 8.125-8.125 8.125 3.638 8.125 8.125-3.638 8.125-8.125 8.125z">
-                    </path>
-                    <path d="M6.929 13.804l1.768 1.768 5.571-5.571-5.571-5.571-1.768 1.768 3.804 3.804z"></path>
-                  </symbol>
-                </use>
-              </svg>
+            <!-- trail location card -->
+            <div class="discover-cards">
+              <div>
+                <img
+                  src="./public/build/assets/images/trail-route-card-image.jpg"
+                  alt="image of trails along sea side"
+                />
+              </div>
+              <div>
+                <h1>Disover Irelands Top Trails Locations</h1>
+                <button id="button-trail-locations" class="discover-now-button">
+                  <span>Discover Now</span>
+                </button>
+              </div>
             </div>
-          </div>
-          <!-- cyle trail location card -->
-          <div class="discover-cards m-3.5">
-            <div>
-              <img src="./public/build/assets/images/cycle-locations-image.jpg" alt="">
-            </div>
-            <div class="flex flex-col place-content-around h-full items-center md:w-1/2">
-              <h1>
-                Disover Irelands Top Cycling Trail Locations
-              </h1>
-              <button id="button-cycle-locations">
-                <span>
-                  Discover Now
-                </span>
-              </button>
-            </div>
-          </div>
-          <!-- trail location card -->
-          <div class="discover-cards">
-            <div>
-              <img src="./public/build/assets/images/trail-card-image.jpg" alt="">
-            </div>
-            <div class="flex flex-col place-content-around h-full items-center md:w-1/2">
-              <h1>Disover Irelands Top Trails Locations</h1>
-              <button id="button-trails-locations">
-                <span>Discover Now</span></button>
-            </div>
-          </div>
-          <!-- tourist location card element -->
-          <div class="discover-cards">
-            <div>
-              <img src="./public/build/assets/images/tour-ireland-card-image.jpg" alt="">
-            </div>
-            <div class="flex flex-col place-content-around h-full items-center md:w-1/2">
-              <h1>Disover Irelands Top Tourist Locations</h1>
-              <button id="button-tourist-locations">
-                <span>
-                  Discover Now
-                </span>
-              </button>
+            <!-- tourist location card element -->
+            <div class="discover-cards">
+              <div>
+                <img
+                  src="./public/build/assets/images/tour-route-card-image.jpg"
+                  alt="image of the river liffey in dublin city"
+                />
+              </div>
+              <div>
+                <h1 class="p-2">Disover Irelands Top Tourist Locations</h1>
+                <button id="button-tourist-locations" class="discover-now-button">
+                  <span> Discover Now </span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Location array data inputed into list elements,this section is set to hidden until user 
+      <!-- Location array data inputed into list elements,this section is set to hidden until user 
           input on button element inside destintaion card section -->
-    <!-- This section displays cycle location trail data after user input -->
-    <section id="cycle-locations-section" class="location-section">
-      <div class="flex flex-col md:flex-row pt-10 px-6">
-        <div class="md:w-1/2 md:mr-2 lg:mr-4">
-          <h1 class="location-list-header">
-            View All Of Irelands Top Cycle Trail Destinations
-          </h1>
-          <ul onclick="showListItemData()" id="cycle-location-list" class="location-list-grid">
-            <li class="location-list-items"></li>
-            <li class="location-list-items"></li>
-            <li class="location-list-items"></li>
-            <li class="location-list-items"></li>
-            <li class="location-list-items"></li>
-            <li class="location-list-items"></li>
-            <li class="location-list-items"></li>
-            <li class="location-list-items"></li>
-            <li class="location-list-items"></li>
-            <li class="location-list-items"></li>
-          </ul>
+      <!-- This section displays cycle location trail data after user input -->
+      <section id="cycle-locations-section" class="location-section">
+        <div class="flex flex-col md:flex-row pt-10 px-6">
+          <div class="md:w-1/2 md:mr-2 lg:mr-4">
+            <h1 class="location-list-header">View All Of Irelands Top Cycle Trail Destinations</h1>
+            <ul onclick="showListItemData()" id="cycle-location-list" class="grid-location-list">
+              <li class="location-list-items"></li>
+              <li class="location-list-items"></li>
+              <li class="location-list-items"></li>
+              <li class="location-list-items"></li>
+              <li class="location-list-items"></li>
+              <li class="location-list-items"></li>
+              <li class="location-list-items"></li>
+              <li class="location-list-items"></li>
+              <li class="location-list-items"></li>
+              <li class="location-list-items"></li>
+            </ul>
+          </div>
+          <!-- displays google maps after user input in card button element -->
+          <div id="map-1" class="map"></div>
         </div>
-        <!-- displays google maps after user input in card button element -->
-        <div id="map-1" class="map">
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- This section displays trail location data after user input -->
-    <section id="trail-locations-section" class="location-section">
-      <div class="flex flex-col md:flex-row pt-10">
-        <div class=" mx-8 md:w-1/2">
-          <h1 class="location-list-header">View All Of Irelands Top Trail Destinations
-          </h1>
-          <ul onclick="showListItemData()" id="trail-location-list" class="location-list-grid">
-            <li class="location-list-items"></li>
-            <li class="location-list-items"></li>
-            <li class="location-list-items"></li>
-            <li class="location-list-items"></li>
-            <li class="location-list-items"></li>
-            <li class="location-list-items"></li>
-            <li class="location-list-items"></li>
-            <li class="location-list-items"></li>
-            <li class="location-list-items"></li>
-            <li class="location-list-items"></li>
-          </ul>
+      <!-- This section displays trail location data after user input -->
+      <section id="trail-locations-section" class="location-section">
+        <div class="flex flex-col md:flex-row pt-10">
+          <div class="mx-8 md:w-1/2">
+            <h1 class="location-list-header">View All Of Irelands Top Trail Destinations</h1>
+            <ul onclick="showListItemData()" id="trail-location-list" class="grid-location-list">
+              <li class="location-list-items"></li>
+              <li class="location-list-items"></li>
+              <li class="location-list-items"></li>
+              <li class="location-list-items"></li>
+              <li class="location-list-items"></li>
+              <li class="location-list-items"></li>
+              <li class="location-list-items"></li>
+              <li class="location-list-items"></li>
+              <li class="location-list-items"></li>
+              <li class="location-list-items"></li>
+            </ul>
+          </div>
+          <!-- displays google maps after user input in card button element -->
+          <div id="map-2" class="map"></div>
         </div>
-        <!-- displays google maps after user input in card button element -->
-        <div id="map-2" class="map ">
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Location array data inputed into list elements,this section is set to hidden until user 
+      <!-- Location array data inputed into list elements,this section is set to hidden until user 
           input on button element inside destintaion card section -->
-    <!-- This section displays Tourist location data after user input -->
-    <section id="tourist-locations-section" class="location-section">
-      <div class="flex flex-col md:flex-row pt-10">
-        <div class="mx-8 md:w-1/2">
-          <h1 class="location-list-header">
-            View All Of Irelands Top Tourist Destinations
-          </h1>
-          <ul onclick="showListItemData()" id="tourist-location-list" class="location-list-grid">
-            <li class="location-list-items"></li>
-            <li class="location-list-items"></li>
-            <li class="location-list-items"></li>
-            <li class="location-list-items"></li>
-            <li class="location-list-items"></li>
-            <li class="location-list-items"></li>
-            <li class="location-list-items"></li>
-            <li class="location-list-items"></li>
-            <li class="location-list-items"></li>
-            <li class="location-list-items"></li>
-          </ul>
-        </div>
-        <!-- displays google maps after user input in card button element -->
-        <div id="map-3" class="map">
-        </div>
-      </div>
-    </section>
-    <!-- section for three towns in ireland -->
-    <section class="relative mt-32 xl:container mx-auto h-auto w-full bg-primary">
-      <div class="flex items-center">
-        <h1 class="inline-block text-white text-2xl p-4 ">Quick Explore</h1>
-        <svg class="w-8 h-8  fill-current text-white">
-          <use xlink:href="#icon-circle-right">
-            <symbol id="icon-circle-right" viewBox="0 0 20 20">
-              <path
-                d="M10 0c-5.523 0-10 4.477-10 10s4.477 10 10 10 10-4.477 10-10-4.477-10-10-10zM10 18.125c-4.487 0-8.125-3.638-8.125-8.125s3.638-8.125 8.125-8.125 8.125 3.638 8.125 8.125-3.638 8.125-8.125 8.125z">
-              </path>
-              <path d="M6.929 13.804l1.768 1.768 5.571-5.571-5.571-5.571-1.768 1.768 3.804 3.804z"></path>
-            </symbol>
-          </use>
-        </svg>
-      </div>
-      <div class="explore-grid-image">
-        <div>
-          <img src="./public/build/assets/images/galway-image.jpg" alt="">
-          <h1>Galway City</h1>
-        </div>
-        <div>
-          <img src="./public/build/assets/images/dublin-temple-bar-image.jpg" alt="">
-          <h1>Dublin City</h1>
-        </div>
-        <div>
-          <img src="./public/build/assets/images/clare-image.jpg" alt="">
-          <h1>County Clare</h1>
-        </div>
-      </div>
-    </section>
-    <!-- section for three towns in ireland list with links  -->
-    <section class="mx-3 lg:container lg:mx-auto my-3 md:my-14">
-      <div class="explore-grid-text ">
-        <!-- first grid element -->
-        <div>
-          <h1>
-            Places of interest in Galway City
-          </h1>
-          <ul class="explore-grid-list-items">
-            <li>
-              <a href="https://goo.gl/maps/kDMJLerNsXwHHD747" target="_blank" rel="noopener noreferrer">
-                <h2>Eyre Square</h2>
-              </a>
-              <svg class="icon-location">
-                <use xlink:href="#icon-location">
-                  <symbol viewBox="0 0 20 20">
-                    <path
-                      d="M10 0c-3.452 0-6.25 2.798-6.25 6.25 0 6.25 6.25 13.75 6.25 13.75s6.25-7.5 6.25-13.75c0-3.452-2.798-6.25-6.25-6.25zM10 10.078c-2.114 0-3.828-1.714-3.828-3.828s1.714-3.828 3.828-3.828 3.828 1.714 3.828 3.828-1.714 3.828-3.828 3.828zM7.578 6.25c0-1.338 1.084-2.422 2.422-2.422s2.422 1.084 2.422 2.422c0 1.338-1.084 2.422-2.422 2.422s-2.422-1.084-2.422-2.422z">
-                    </path>
-                  </symbol>
-                </use>
-              </svg>
-            </li>
-            <li>
-              <a href="https://goo.gl/maps/T58EN9A4Mru6x9vq8" target="_blank" rel="noopener noreferrer">
-                <h2>Galway Atlantaquaria, National Aquarium of Ireland</h2>
-              </a>
-              <svg class="icon-location">
-                <use xlink:href="#icon-location">
-                  <symbol id="icon-location" viewBox="0 0 20 20">
-                    <path
-                      d="M10 0c-3.452 0-6.25 2.798-6.25 6.25 0 6.25 6.25 13.75 6.25 13.75s6.25-7.5 6.25-13.75c0-3.452-2.798-6.25-6.25-6.25zM10 10.078c-2.114 0-3.828-1.714-3.828-3.828s1.714-3.828 3.828-3.828 3.828 1.714 3.828 3.828-1.714 3.828-3.828 3.828zM7.578 6.25c0-1.338 1.084-2.422 2.422-2.422s2.422 1.084 2.422 2.422c0 1.338-1.084 2.422-2.422 2.422s-2.422-1.084-2.422-2.422z">
-                    </path>
-                  </symbol>
-                </use>
-              </svg>
-            </li>
-            <li>
-              <a href="https://goo.gl/maps/JRERpRX7Y8uQqNWd8" target="_blank" rel="noopener noreferrer">
-                <h2>Galway Cathedral</h2>
-              </a>
-              <svg class="icon-location">
-                <use xlink:href="#icon-location">
-                  <symbol id="icon-location" viewBox="0 0 20 20">
-                    <path
-                      d="M10 0c-3.452 0-6.25 2.798-6.25 6.25 0 6.25 6.25 13.75 6.25 13.75s6.25-7.5 6.25-13.75c0-3.452-2.798-6.25-6.25-6.25zM10 10.078c-2.114 0-3.828-1.714-3.828-3.828s1.714-3.828 3.828-3.828 3.828 1.714 3.828 3.828-1.714 3.828-3.828 3.828zM7.578 6.25c0-1.338 1.084-2.422 2.422-2.422s2.422 1.084 2.422 2.422c0 1.338-1.084 2.422-2.422 2.422s-2.422-1.084-2.422-2.422z">
-                    </path>
-                  </symbol>
-                </use>
-              </svg>
-            </li>
-          </ul>
-        </div>
-        <!-- seccond grid element -->
-        <div>
-          <h1>
-            Places of interest in Dublin City
-          </h1>
-          <ul class="explore-grid-list-items">
-            <li>
-              <a href="https://goo.gl/maps/nocTZTYgPkNPka9BA">
-                <h2>Dublin Castle</h2>
-              </a>
-              <svg class="icon-location">
-                <use xlink:href="#icon-location2">
-                  <symbol id="icon-location2" viewBox="0 0 20 20">
-                    <path
-                      d="M10 0c-3.452 0-6.25 2.798-6.25 6.25 0 6.25 6.25 13.75 6.25 13.75s6.25-7.5 6.25-13.75c0-3.452-2.798-6.25-6.25-6.25zM10 10.078c-2.114 0-3.828-1.714-3.828-3.828s1.714-3.828 3.828-3.828 3.828 1.714 3.828 3.828-1.714 3.828-3.828 3.828zM7.578 6.25c0-1.338 1.084-2.422 2.422-2.422s2.422 1.084 2.422 2.422c0 1.338-1.084 2.422-2.422 2.422s-2.422-1.084-2.422-2.422z">
-                    </path>
-                  </symbol>
-                </use>
-              </svg>
-            </li>
-            <li>
-              <a href="https://goo.gl/maps/ewkronwgLgn1tqxm8">
-                <h2>The Little Muesum of Dublin</h2>
-              </a>
-              <svg class="icon-location">
-                <use xlink:href="#icon-location2">
-                  <symbol id="icon-location2" viewBox="0 0 20 20">
-                    <path
-                      d="M10 0c-3.452 0-6.25 2.798-6.25 6.25 0 6.25 6.25 13.75 6.25 13.75s6.25-7.5 6.25-13.75c0-3.452-2.798-6.25-6.25-6.25zM10 10.078c-2.114 0-3.828-1.714-3.828-3.828s1.714-3.828 3.828-3.828 3.828 1.714 3.828 3.828-1.714 3.828-3.828 3.828zM7.578 6.25c0-1.338 1.084-2.422 2.422-2.422s2.422 1.084 2.422 2.422c0 1.338-1.084 2.422-2.422 2.422s-2.422-1.084-2.422-2.422z">
-                    </path>
-                  </symbol>
-                </use>
-              </svg>
-            </li>
-            <li>
-              <a href="https://goo.gl/maps/sEqt74DbYRuxJ5qC6">
-                <h2>Dublin Zoo</h2>
-              </a>
-              <svg class="icon-location">
-                <use xlink:href="#icon-location2">
-                  <symbol id="icon-location2" viewBox="0 0 20 20">
-                    <path
-                      d="M10 0c-3.452 0-6.25 2.798-6.25 6.25 0 6.25 6.25 13.75 6.25 13.75s6.25-7.5 6.25-13.75c0-3.452-2.798-6.25-6.25-6.25zM10 10.078c-2.114 0-3.828-1.714-3.828-3.828s1.714-3.828 3.828-3.828 3.828 1.714 3.828 3.828-1.714 3.828-3.828 3.828zM7.578 6.25c0-1.338 1.084-2.422 2.422-2.422s2.422 1.084 2.422 2.422c0 1.338-1.084 2.422-2.422 2.422s-2.422-1.084-2.422-2.422z">
-                    </path>
-                  </symbol>
-                </use>
-              </svg>
-            </li>
-          </ul>
-        </div>
-        <!-- third grid element -->
-        <div>
-          <h1>
-            Places of interest in Clare City
-          </h1>
-          <ul class="explore-grid-list-items">
-            <li>
-              <a href="https://goo.gl/maps/5prpX1EdktTWjmm8A">
-                <h2>Craggaunowen</h2>
-              </a>
-              <svg class="icon-location">
-                <use xlink:href="#icon-location2">
-                  <symbol id="icon-location2" viewBox="0 0 20 20">
-                    <path
-                      d="M10 0c-3.452 0-6.25 2.798-6.25 6.25 0 6.25 6.25 13.75 6.25 13.75s6.25-7.5 6.25-13.75c0-3.452-2.798-6.25-6.25-6.25zM10 10.078c-2.114 0-3.828-1.714-3.828-3.828s1.714-3.828 3.828-3.828 3.828 1.714 3.828 3.828-1.714 3.828-3.828 3.828zM7.578 6.25c0-1.338 1.084-2.422 2.422-2.422s2.422 1.084 2.422 2.422c0 1.338-1.084 2.422-2.422 2.422s-2.422-1.084-2.422-2.422z">
-                    </path>
-                  </symbol>
-                </use>
-              </svg>
-            </li>
-            <li>
-              <a href="https://goo.gl/maps/6QW84tcS8faUT6Dg9">
-                <h2>Poulnabrone Dolmen</h2>
-              </a>
-              <svg class="icon-location">
-                <use xlink:href="#icon-location2">
-                  <symbol id="icon-location2" viewBox="0 0 20 20">
-                    <path
-                      d="M10 0c-3.452 0-6.25 2.798-6.25 6.25 0 6.25 6.25 13.75 6.25 13.75s6.25-7.5 6.25-13.75c0-3.452-2.798-6.25-6.25-6.25zM10 10.078c-2.114 0-3.828-1.714-3.828-3.828s1.714-3.828 3.828-3.828 3.828 1.714 3.828 3.828-1.714 3.828-3.828 3.828zM7.578 6.25c0-1.338 1.084-2.422 2.422-2.422s2.422 1.084 2.422 2.422c0 1.338-1.084 2.422-2.422 2.422s-2.422-1.084-2.422-2.422z">
-                    </path>
-                  </symbol>
-                </use>
-              </svg>
-            </li>
-            <li>
-              <a href="https://g.page/aillwee?share">
-                <h2>Galway Cathedral</h2>
-              </a>
-              <svg class="icon-location">
-                <use xlink:href="#icon-location2">
-                  <symbol id="icon-location2" viewBox="0 0 20 20">
-                    <path
-                      d="M10 0c-3.452 0-6.25 2.798-6.25 6.25 0 6.25 6.25 13.75 6.25 13.75s6.25-7.5 6.25-13.75c0-3.452-2.798-6.25-6.25-6.25zM10 10.078c-2.114 0-3.828-1.714-3.828-3.828s1.714-3.828 3.828-3.828 3.828 1.714 3.828 3.828-1.714 3.828-3.828 3.828zM7.578 6.25c0-1.338 1.084-2.422 2.422-2.422s2.422 1.084 2.422 2.422c0 1.338-1.084 2.422-2.422 2.422s-2.422-1.084-2.422-2.422z">
-                    </path>
-                  </symbol>
-                </use>
-              </svg>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="bg-primary h-72 w-full mt-14">
-    <div class="grid h-full w-full ">
-      <div
-        class="place-self-center w-3/4  p-4 md:p-8 md:w-2/5 md:h-auto border-solid border-2 border-yellow-600  rounded-md">
-        <form id="form">
-          <h2
-            class="bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500 uppercase text-3xl mb-3.5">
-            Get in touch!</h2>
-          <div class="mb-3 w-full">
-            <label for="message"></label>
-            <input class="placeholder-gray-800 md:w-5/6 bg-white rounded-sm p-2" type="text" name="message" id="message"
-              placeholder="Your email">
+      <!-- This section displays Tourist location data after user input -->
+      <section id="tourist-locations-section" class="location-section">
+        <div class="flex flex-col md:flex-row pt-10">
+          <div class="mx-8 md:w-1/2">
+            <h1 class="location-list-header">View All Of Irelands Top Tourist Destinations</h1>
+            <ul onclick="showListItemData()" id="tourist-location-list" class="grid-location-list">
+              <li class="location-list-items"></li>
+              <li class="location-list-items"></li>
+              <li class="location-list-items"></li>
+              <li class="location-list-items"></li>
+              <li class="location-list-items"></li>
+              <li class="location-list-items"></li>
+              <li class="location-list-items"></li>
+              <li class="location-list-items"></li>
+              <li class="location-list-items"></li>
+              <li class="location-list-items"></li>
+            </ul>
           </div>
-          <div class="field mb-3">
-            <label for="from_email"></label>
-            <input class="placeholder-gray-800 md:w-5/6 bg-white rounded-sm p-2" type="text" name="from_email"
-              id="from_email" placeholder="Your message">
+          <!-- displays google maps after user input in card button element -->
+          <div id="map-3" class="map"></div>
+        </div>
+      </section>
+      <!-- section for three towns in ireland -->
+      <section class="relative mx-auto mt-10 h-auto w-full bg-primary xl:container">
+        <div class="flex items-center">
+          <h1 class="inline-block text-white text-2xl p-4">Quick Explore</h1>
+          <svg
+            aria-hidden="true"
+            aria-hidden="true"
+            class="inline-block w-8 h-8 fill-current text-white"
+          >
+            <use
+              xlink:href="./public/build/assets/icons/circle-right-icon.svg#icon-circle-right"
+            ></use>
+          </svg>
+        </div>
+        <div class="grid-quick-explpore">
+          <div>
+            <img
+              src="./public/build/assets/images/galway-city-image.jpg"
+              alt="image of musician singing in galway city"
+            />
+            <h1>Galway City</h1>
           </div>
-          <input class="rounded-md text-md px-4 py-2 bg-yellow-600" type="submit" id="button" value="Send Email">
-        </form>
+          <div>
+            <img
+              src="./public/build/assets/images/dublin-temple-bar-image.jpg"
+              alt=" image of temple bar in dublin city"
+            />
+            <h1>Dublin City</h1>
+          </div>
+          <div>
+            <img
+              src="./public/build/assets/images/clare-image.jpg"
+              alt="image of two swimmers in a lake in county clare"
+            />
+            <h1>County Clare</h1>
+          </div>
+        </div>
+      </section>
+      <!-- section for towns in ireland list with links  -->
+      <section class="mx-3 lg:container lg:mx-auto my-8 md:my-14">
+        <div class="grid-explore-cards">
+          <!-- first card element -->
+          <div>
+            <h1>Places of interest in Galway City</h1>
+            <ul class="grid-explore-list">
+              <li>
+                <a href="https://goo.gl/maps/kDMJLerNsXwHHD747" target="_blank">
+                  <h2>Eyre Square</h2>
+                </a>
+                <svg aria-hidden="true" class="icon-location">
+                  <use
+                    xlink:href="./public/build/assets/icons/location-icon.svg#icon-location"
+                  ></use>
+                </svg>
+              </li>
+              <li>
+                <a href="https://goo.gl/maps/T58EN9A4Mru6x9vq8" target="_blank">
+                  <h2>Galway Atlantaquaria, National Aquarium of Ireland</h2>
+                </a>
+                <svg aria-hidden="true" class="icon-location">
+                  <use
+                    xlink:href="./public/build/assets/icons/location-icon.svg#icon-location"
+                  ></use>
+                </svg>
+              </li>
+              <li>
+                <a href="https://goo.gl/maps/JRERpRX7Y8uQqNWd8" target="_blank">
+                  <h2>Galway Cathedral</h2>
+                </a>
+                <svg aria-hidden="true" class="icon-location">
+                  <use
+                    xlink:href="./public/build/assets/icons/location-icon.svg#icon-location"
+                  ></use>
+                </svg>
+              </li>
+            </ul>
+          </div>
+          <!-- seccond card element -->
+          <div>
+            <h1>Places of interest in Dublin City</h1>
+            <ul class="grid-explore-list">
+              <li>
+                <a href="https://goo.gl/maps/nocTZTYgPkNPka9BA" target="_blank">
+                  <h2>Dublin Castle</h2>
+                </a>
+                <svg aria-hidden="true" class="icon-location">
+                  <use
+                    xlink:href="./public/build/assets/icons/location-icon.svg#icon-location"
+                  ></use>
+                </svg>
+              </li>
+              <li>
+                <a href="https://goo.gl/maps/ewkronwgLgn1tqxm8" target="_blank">
+                  <h2>The Little Muesum of Dublin</h2>
+                </a>
+                <svg aria-hidden="true" class="icon-location">
+                  <use
+                    xlink:href="./public/build/assets/icons/location-icon.svg#icon-location"
+                  ></use>
+                </svg>
+              </li>
+              <li>
+                <a href="https://goo.gl/maps/sEqt74DbYRuxJ5qC6" target="_blank">
+                  <h2>Dublin Zoo</h2>
+                </a>
+                <svg aria-hidden="true" class="icon-location">
+                  <use
+                    xlink:href="./public/build/assets/icons/location-icon.svg#icon-location"
+                  ></use>
+                </svg>
+              </li>
+            </ul>
+          </div>
+          <!-- third card element -->
+          <div>
+            <h1>Places of interest in Clare City</h1>
+            <ul class="grid-explore-list">
+              <li>
+                <a href="https://goo.gl/maps/5prpX1EdktTWjmm8A" target="_blank">
+                  <h2>Craggaunowen</h2>
+                </a>
+                <svg aria-hidden="true" class="icon-location">
+                  <use xlink:href="public/build/assets/icons/location-icon.svg#icon-location"></use>
+                </svg>
+              </li>
+              <li>
+                <a href="https://goo.gl/maps/6QW84tcS8faUT6Dg9" target="_blank">
+                  <h2>Poulnabrone Dolmen</h2>
+                </a>
+                <svg aria-hidden="true" class="icon-location">
+                  <use
+                    xlink:href="./public/build/assets/icons/location-icon.svg#icon-location"
+                  ></use>
+                </svg>
+              </li>
+              <li>
+                <a href="https://g.page/aillwee?share" target="_blank">
+                  <h2>Galway Cathedral</h2>
+                </a>
+                <svg aria-hidden="true" class="icon-location">
+                  <use
+                    xlink:href="./public/build/assets/icons/location-icon.svg#icon-location"
+                  ></use>
+                </svg>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="grid h-full w-full bg-primary">
+        <div
+          class="place-self-center w-3/4 p-4 border-solid border-2 border-yellow-600 rounded-md my-6 md:p-8 md:w-2/5 md:h-auto"
+        >
+          <!-- email form -->
+          <form id="form">
+            <h2
+              class="bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500 uppercase text-3xl mb-3.5"
+            >
+              Get in touch!
+            </h2>
+            <div class="mb-3 w-full">
+              <label for="form_name"></label>
+              <input type="text" name="from_name" id="from_name" placeholder="Your name" required />
+            </div>
+            <div class="mb-3 w-full">
+              <label for="form_email"></label>
+              <input
+                type="email"
+                name="from_email"
+                id="from_email"
+                placeholder="Your email"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="message"></label>
+              <input
+                type="text"
+                name="message"
+                id="form_message"
+                placeholder="Your message"
+                required
+              />
+            </div>
+            <input
+              class="rounded-md px-4 py-2 text-xl bg-yellow-600"
+              type="submit"
+              id="button_email"
+              value="Send Email"
+            />
+          </form>
+        </div>
       </div>
-    </div>
-  </footer>
-
-  <!-- <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeIG-STGaKtDRIipoNZFCI9EZIwTRyIL4&callback=initMap">
-  </script> -->
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-  <script src="./public/build/assets/js/email.js"></script>
-  <script src=" ./public/build/assets/js/maps.js"></script>
-  <script src="./public/build/assets/js/main.js"></script>
-</body>
-
+    </footer>
+    <script src="./public/build/assets/js/main.js"></script>
+    <script src="./public/build/assets/js/email.js"></script>
+    <script src=" ./public/build/assets/js/maps.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeIG-STGaKtDRIipoNZFCI9EZIwTRyIL4&callback=initMap"
+      async
+      defer
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js" defer></script>
+  </body>
 </html>
