@@ -1,22 +1,21 @@
-const btn = document.getElementById('button-email');
+const btnEmail = document.getElementById('button_email');
+// form event listener for form submition
+document.getElementById('form').addEventListener('submit', function (event) {
+  event.preventDefault();
+  emailjs.init('user_ZxaX1Ph4GVNusJIcXdifR');
 
-emailjs.init('user_ZxaX1Ph4GVNusJIcXdifR');
+  btnEmail.value = 'Sending...';
 
-document.getElementById('form')
-  .addEventListener('submit', function (event) {
-    event.preventDefault();
+  const serviceID = 'default_service';
+  const templateID = 'template_k3subcm';
 
-    btn.value = 'Your message is sent, have a great day!';
-
-    const serviceID = 'default_service';
-    const templateID = 'template_k3subcm';
-
-    emailjs.sendForm(serviceID, templateID, this)
-      .then(() => {
-        btn.value = 'Send Email';
-        alert('Sent!');
-      }, (err) => {
-        btn.value = 'Send Email';
-        alert(JSON.stringify(err));
-      });
-  });
+  emailjs.sendForm(serviceID, templateID, this).then(
+    () => {
+      btnEmail.value = 'Message Sent';
+    },
+    (err) => {
+      btnEmail.value = 'Message failed to send';
+      alert(JSON.stringify(err));
+    }
+  );
+});
