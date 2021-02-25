@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,600&display=swap');
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* cards inside destination card container */
+.discover-cards {
+  @apply flex 
+  flex-col
+  w-60
+  h-5/6
+  rounded-xl
+  shadow-xl 
+  bg-white
+  md:flex-row
+  md:h-3/4
+  md:w-120;
+}
+
+.discover-cards > div {
+  @apply md:w-1/2;
+}
+
+.discover-cards div:nth-of-type(2n) {
+  @apply flex 
+  flex-col 
+  place-content-around 
+  h-full 
+  items-center;
+}
+
+.discover-cards img {
+  @apply rounded-t-md
+  object-cover
+  md:rounded-tr-none
+  md:rounded-l-md 
+  md:h-full;
+}
+
+.discover-cards h1 {
+  @apply text-center
+text-gray-700
+  text-xl
+  md:text-2xl
+  p-1;
+}
+
+.discover-cards button {
+  @apply bg-primary
+  rounded-md
+  p-2.5
+  w-10/12
+  shadow-2xl
+  text-center
+  text-white 
+  text-lg
+  hover:bg-gray-300 
+  hover:text-primary;
+}
+
+/* section outer element that dispalys after user clicks discover now button */
+.location-section {
+  @apply hidden
+  mt-24
+  mb-16
+  mx-auto
+bg-primary
+  rounded-md
+  shadow-2xl
+  xl:container;
+}
+/* location list heading above ul element */
+.location-list-header {
+  @apply text-xl
+  text-center
+  text-white
+  bg-indigo-900
+  p-4
+  mb-4
+  shadow-md 
+  rounded-lg
+  md:text-2xl md:p-8;
+}
+/* location list elements */
+.location-list-items {
+  transition: ease-in-out 0.8s;
+  @apply flex
+  flex-col
+  justify-around
+  shadow-md
+  rounded-md
+  text-center
+  p-3
+  bg-white;
+}
+/* class is called when user clicks on show more button (see main.js line: 225 - 229)*/
+.location-li-active {
+  height: calc(50% + 80px);
+  margin-bottom: 100px;
+  @apply text-gray-800;
+}
+/* Grid element for location list items*/
+.grid-location-list {
+  @apply h-full
+  grid
+  grid-cols-1
+  auto-rows-auto
+  gap-x-4
+  gap-y-4
+  sm:grid-rows-5
+  sm:grid-cols-2
+  md:pb-36
+  lg:gap-x-8;
+}
+/* H1 element in grid list items*/
+.list-heading {
+  @apply text-xl;
+}
+/* button for location list items dynamically added from main js file (line: 205) */
+.button-location-section {
+  @apply bg-primary
+  rounded-md
+text-white
+  p-2
+  mt-3
+  uppercase
+  w-full
+  mx-auto;
+}
+/* Google Map */
+.map {
+  @apply h-96
+  w-auto 
+  m-2.5 
+  md:h-96 
+  md:w-1/2;
+}
+/* quick explore section grid */
+.grid-quick-explpore {
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  @apply grid
+  gap-4 
+  bg-white
+  overflow-auto
+  p-4;
+}
+
+.grid-quick-explpore div {
+  @apply w-72
+  md:w-auto;
+}
+
+.grid-quick-explpore img {
+  @apply rounded-md;
+}
+
+.grid-quick-explpore h1 {
+  @apply text-2xl
+  py-4 
+  pl-2;
+}
+/* grid dislplaying city lication links to google maps */
+.grid-explore-cards {
+  @apply grid 
+  grid-flow-row 
+  gap-4 
+  text-white
+  md:grid-flow-col;
+}
+
+.grid-explore-cards > div {
+  @apply bg-primary 
+  rounded-lg;
+}
+
+.grid-explore-cards h1 {
+  @apply text-xl 
+  text-center 
+  pt-3 
+  pb-1 
+  mx-4 
+  border-yellow-600 
+  border-b-2
+  md:text-2xl;
+}
+
+.grid-explore-cards h2 {
+  @apply md:text-lg;
+}
+
+.grid-explore-list {
+  @apply px-6
+  pt-8
+  pb-4
+  divide-y-2 
+  divide-yellow-800;
+}
+
+.grid-explore-list li {
+  @apply flex 
+  justify-between 
+  items-center
+  transition 
+  ease-in-out
+  duration-300
+  hover:text-yellow-600;
+}
+
+.grid-explore-list li:first-child {
+  @apply pb-2;
+}
+
+.grid-explore-list li:not(:first-child) {
+  @apply pt-2
+  pb-2;
+}
+
+/*  scrollbar Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* scrollbar Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-primary
+  rounded-xl;
+}
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* icon style */
+.icon-location {
+  @apply inline-block
+  fill-current
+  h-6
+  w-6;
+}
+.icon-arrow {
+  @apply inline-block
+  h-6
+  w-auto
+  flex-1 
+  fill-current;
+}
+/* discover now button active class  */
+.button-active {
+  @apply text-yellow-600
+  ring-2
+  ring-yellow-600 
+  ring-opacity-100 !important;
+}
+/* form input */
+form input {
+  @apply placeholder-gray-800 
+  w-full 
+  lg:w-5/6 
+  bg-white rounded-sm p-2;
+}
+/* Hide labels form text not visually not needed */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
