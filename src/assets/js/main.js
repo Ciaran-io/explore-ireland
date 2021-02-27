@@ -178,14 +178,21 @@ const touristLocationData = [
   },
 ];
 
-const sectionCyclingContainer = document.getElementById('cycle-locations-section');
-const sectionTrailContainer = document.getElementById('trail-locations-section');
-const sectionTouringContainer = document.getElementById('tourist-locations-section');
+const sectionCyclingContainer = document.getElementById(
+  'cycle-locations-section'
+);
+const sectionTrailContainer = document.getElementById(
+  'trail-locations-section'
+);
+const sectionTouringContainer = document.getElementById(
+  'tourist-locations-section'
+);
 const locationListLi = document.querySelectorAll('li.location-list-items');
-const cycleListLi = document.querySelectorAll('#cycle-location-list > li');
 const cycleDiscoverButton = document.getElementById('button-cycle-locations');
 const trailDiscoverButton = document.getElementById('button-trail-locations');
-const touristDiscoverButton = document.getElementById('button-tourist-locations');
+const touristDiscoverButton = document.getElementById(
+  'button-tourist-locations'
+);
 
 let locationHeading;
 let locationHeadingText;
@@ -206,7 +213,6 @@ locationListLi.forEach((li) => {
   locationCountyText = document.createTextNode('County ');
   locationCounty.append(locationCountyText);
   locationCounty.classList.add('list-heading', 'hidden');
-
   findOutMoreButton = document.createElement('button');
   findOutMoreButtonText = document.createTextNode('Find out more');
   findOutMoreButton.appendChild(findOutMoreButtonText);
@@ -221,12 +227,16 @@ showListItemData = () => {
     li.classList.toggle('location-li-active'); //toggles class
   });
   // Changes class of heading2 element
-  let locationCountyHeading = document.querySelectorAll('.location-list-items h2.list-heading');
+  let locationCountyHeading = document.querySelectorAll(
+    '.location-list-items h2.list-heading'
+  );
   locationCountyHeading.forEach((h2) => {
     h2.classList.toggle('hidden'); //toggles class
   });
   // Changes the inner HTML of the button when the user clicks on button
-  let displayDataButton = document.querySelectorAll('button.button-location-section');
+  let displayDataButton = document.querySelectorAll(
+    'button.button-location-section'
+  );
   displayDataButton.forEach((button) => {
     if (button.innerHTML == 'Find out more') {
       button.innerHTML = 'Show less';
@@ -237,7 +247,9 @@ showListItemData = () => {
 };
 
 // Varaible for all h1 & h2 elements cycle trail list
-let cyclingLocationListHeading = document.querySelectorAll('#cycle-location-list h1.list-heading');
+let cyclingLocationListHeading = document.querySelectorAll(
+  '#cycle-location-list h1.list-heading'
+);
 let cyclingLocationSubListHeading = document.querySelectorAll(
   '#cycle-location-list h2.list-heading'
 );
@@ -265,8 +277,12 @@ cyclingLocationSubListHeading[8].innerHTML += cyclingLocationData[8].county;
 cyclingLocationSubListHeading[9].innerHTML += cyclingLocationData[9].county;
 
 // Varaible for all h1 & h2 elements trail trail list
-let trailLocationListHeading = document.querySelectorAll('#trail-location-list h1.list-heading');
-let trailLocationSubListHeading = document.querySelectorAll('#trail-location-list h2.list-heading');
+let trailLocationListHeading = document.querySelectorAll(
+  '#trail-location-list h1.list-heading'
+);
+let trailLocationSubListHeading = document.querySelectorAll(
+  '#trail-location-list h2.list-heading'
+);
 
 trailLocationListHeading[0].innerHTML = trailLocationData[0].name;
 trailLocationListHeading[1].innerHTML = trailLocationData[1].name;
