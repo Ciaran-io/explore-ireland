@@ -1,7 +1,7 @@
-let cycleLocationsMap;
-let trailLocationsMap;
-let touristLocationsMap;
-let mapStyle = [
+const cycleLocationsMap;
+const trailLocationsMap;
+const touristLocationsMap;
+const mapStyle = [
   {
     featureType: 'administrative',
     elementType: 'geometry.stroke',
