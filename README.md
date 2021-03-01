@@ -301,7 +301,7 @@ From the root directory run ` node imagein.js`
 
 ### content
 
-- The cycle location & walking trails used in google maps & the card content that displays the trail locations[sportsireland.ie](https://www.sportireland.ie/outdoors/cycling-off-road/trails)
+- The cycle location & walking trails used in google maps & the card content that displays the trail locations [sportsireland.ie](https://www.sportireland.ie/outdoors/cycling-off-road/trails)
 
 - The top tourist locations are sourced from [Plantware.com](https://www.planetware.com/tourist-attractions/ireland-irl.htm)
 
