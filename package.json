@@ -1,25 +1,7 @@
 {
-  "name": "explore-ireland",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "buildcss": "postcss src/assets/css/main.css -o dist/assets/css/styles.min.css",
-    "buildjs": "terser src/assets/js/maps.js -o dist/assets/js/maps.min.js -c -m"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "autoprefixer": "^10.0.2",
-    "imagemin-webp": "^6.0.0",
-    "postcss": "^8.1.10",
-    "postcss-cli": "^8.3.0",
-    "tailwindcss": "^2.0.1"
-  },
   "devDependencies": {
-    "cssnano": "^5.0.2",
-    "imagemin": "^8.0.0",
-    "terser": "^5.6.0"
+    "autoprefixer": "^10.2.6",
+    "postcss": "^8.3.2",
+    "tailwindcss": "^2.0.4"
   }
 }
